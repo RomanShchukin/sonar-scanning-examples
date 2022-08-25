@@ -28,8 +28,8 @@ steps:
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
     codeCoverageToolOption: 'Cobertura'
-    # isJacocoCoverageReportXML: true
-    sonarQubeRunAnalysis: true
+#    isJacocoCoverageReportXML: true
+#    sonarQubeRunAnalysis: true
 
 #- task: SonarQubePublish@5
 #  inputs:
