@@ -29,6 +29,8 @@ steps:
     goals: 'package'
     codeCoverageToolOption: 'JaCoCo'
     isJacocoCoverageReportXML: true
+    sonarQubeRunAnalysis: true
+    
 - task: SonarQubePublish@5
   inputs:
     pollingTimeoutSec: '300'
