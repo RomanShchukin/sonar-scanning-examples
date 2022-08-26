@@ -24,13 +24,13 @@ steps:
     goals: 'clean verify -X'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    codeCoverageToolOption: JaCoCo
+    codeCoverageToolOption: Cobertura
     javaHomeOption: 'JDKVersion'
     mavenVersionOption: 'Default'
     mavenAuthenticateFeed: false
     effectivePomSkip: false
     sonarQubeRunAnalysis: true
-    isJacocoCoverageReportXML: true
+#    isJacocoCoverageReportXML: true
     sqMavenPluginVersionChoice: 'latest'
 - task: SonarQubePublish@5
   inputs:
