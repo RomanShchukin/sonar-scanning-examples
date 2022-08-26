@@ -18,7 +18,7 @@ steps:
     extraProperties: |
       sonar.projectKey=RomanShchukinTest_1
       sonar.projectName=RomanShchukinTest_1
-- task: Maven@2
+- task: Maven@3
   inputs:
     mavenPomFile: '/home/vsts/work/1/s/sonarqube-scanner-maven/maven-multimodule/pom.xml'
     mavenOptions: '-Xmx3072m'
@@ -32,7 +32,7 @@ steps:
     pmdRunAnalysis: true
     sqMavenPluginVersionChoice: 'latest'
 #    isJacocoCoverageReportXML: true
-    sonarQubeRunAnalysis: true
+#    sonarQubeRunAnalysis: true
 - task: SonarQubePublish@5
   inputs:
     pollingTimeoutSec: '300'
