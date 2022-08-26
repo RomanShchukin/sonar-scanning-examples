@@ -30,7 +30,7 @@ steps:
     goals: 'package'
     codeCoverageToolOption: Cobertura
     pmdRunAnalysis: true
-#    sqMavenPluginVersionChoice: 'latest'
+    sqMavenPluginVersionChoice: 'latest'
 #    isJacocoCoverageReportXML: true
 #    sonarQubeRunAnalysis: true
 
