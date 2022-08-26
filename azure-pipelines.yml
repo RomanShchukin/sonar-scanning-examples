@@ -28,6 +28,7 @@ steps:
 #    publishJUnitResults: true
 #    testResultsFiles: '**/surefire-reports/TEST-*.xml'
 #    goals: 'package'
+    codeCoverageFailIfEmpty: true
     codeCoverageToolOption: Cobertura
     checkStyleRunAnalysis: true
     pmdRunAnalysis: true
