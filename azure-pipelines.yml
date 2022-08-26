@@ -21,18 +21,17 @@ steps:
 - task: Maven@3.209.1
   inputs:
     mavenPomFile: '/home/vsts/work/1/s/sonarqube-scanner-maven/maven-multimodule/pom.xml'
-    mavenOptions: '-Xmx3072m'
-    javaHomeOption: "JDKVersion"
-#    jdkVersionOption: "1.8"
-    jdkArchitectureOption: 'x64'
+    goals: 'clean verify -X'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'package'
-    codeCoverageToolOption: JaCoCo
-    pmdRunAnalysis: true
-    sqMavenPluginVersionChoice: 'latest'
-    isJacocoCoverageReportXML: true
+    codeCoverageToolOption: 'JaCoCo'
+    javaHomeOption: 'JDKVersion'
+    mavenVersionOption: 'Default'
+    mavenAuthenticateFeed: false
+    effectivePomSkip: false
     sonarQubeRunAnalysis: true
+    isJacocoCoverageReportXML: true
+    sqMavenPluginVersionChoice: 'latest'
 - task: SonarQubePublish@5
   inputs:
     pollingTimeoutSec: '300'
