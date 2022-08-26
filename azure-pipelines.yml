@@ -32,7 +32,7 @@ steps:
     pmdRunAnalysis: true
     sqMavenPluginVersionChoice: 'latest'
 #    isJacocoCoverageReportXML: true
-#    sonarQubeRunAnalysis: true
+    sonarQubeRunAnalysis: true
 - task: SonarQubePublish@5
   inputs:
     pollingTimeoutSec: '300'
