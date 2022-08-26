@@ -10,11 +10,6 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-#- task: JavaToolInstaller@0
-#  inputs:
-#    versionSpec: '11'
-#    jdkArchitectureOption: 'x64'
-#    jdkSourceOption: 'PreInstalled'
 - task: SonarQubePrepare@5
   inputs:
     SonarQube: 'SonarQubeConnection'
@@ -23,19 +18,19 @@ steps:
     extraProperties: |
       sonar.projectKey=RomanShchukinTest_1
       sonar.projectName=RomanShchukinTest_1
-- task: Maven@3.209.0
+- task: Maven@3.209.2
   inputs:
     mavenPomFile: '/home/vsts/work/1/s/sonarqube-scanner-maven/maven-multimodule/pom.xml'
     goals: 'clean verify -X'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    codeCoverageToolOption: Cobertura
+    codeCoverageToolOption: JaCoCo
     javaHomeOption: 'JDKVersion'
     mavenVersionOption: 'Default'
     mavenAuthenticateFeed: false
     effectivePomSkip: false
     sonarQubeRunAnalysis: true
-#    isJacocoCoverageReportXML: true
+    isJacocoCoverageReportXML: true
     sqMavenPluginVersionChoice: 'latest'
     jdkVersionOption: "1.11"
 - task: SonarQubePublish@5
