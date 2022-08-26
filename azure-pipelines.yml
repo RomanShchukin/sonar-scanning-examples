@@ -12,7 +12,7 @@ pool:
 steps:
 - task: JavaToolInstaller@0
   inputs:
-    versionSpec: '6'
+    versionSpec: '11'
     jdkArchitectureOption: 'x64'
     jdkSourceOption: 'PreInstalled'
 - task: SonarQubePrepare@5
@@ -37,7 +37,7 @@ steps:
     sonarQubeRunAnalysis: true
 #    isJacocoCoverageReportXML: true
     sqMavenPluginVersionChoice: 'latest'
-    jdkVersionOption: "1.6"
+    jdkVersionOption: "1.11"
 - task: SonarQubePublish@5
   inputs:
     pollingTimeoutSec: '300'
