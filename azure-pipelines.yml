@@ -21,7 +21,8 @@ steps:
 - task: Maven@3.209.0
   inputs:
     mavenPomFile: '/home/vsts/work/1/s/sonarqube-scanner-maven/maven-multimodule/pom.xml'
-    mavenOptions: '-Xmx3072m'
+    options: '-Dmaven.wagon.http.pool=false'
+#    mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
