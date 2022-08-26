@@ -28,7 +28,7 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
-    codeCoverageToolOption: Cobertura
+    codeCoverageToolOption: JaCoCo
     pmdRunAnalysis: true
     sqMavenPluginVersionChoice: 'latest'
 #    isJacocoCoverageReportXML: true
