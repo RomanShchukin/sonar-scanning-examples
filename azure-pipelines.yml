@@ -24,7 +24,7 @@ steps:
     goals: 'clean verify -X'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    codeCoverageToolOption: 'JaCoCo'
+    codeCoverageToolOption: JaCoCo
     javaHomeOption: 'JDKVersion'
     mavenVersionOption: 'Default'
     mavenAuthenticateFeed: false
