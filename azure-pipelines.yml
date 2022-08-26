@@ -21,10 +21,10 @@ steps:
 - task: Maven@2
   inputs:
     mavenPomFile: '/home/vsts/work/1/s/sonarqube-scanner-maven/maven-multimodule/pom.xml'
-#    mavenOptions: '-Xmx3072m'
+    mavenOptions: '-Xmx3072m'
     javaHomeOption: "JDKVersion"
     jdkVersionOption: "1.8"
-#    jdkArchitectureOption: 'x64'
+    jdkArchitectureOption: 'x64'
 #    publishJUnitResults: true
 #    testResultsFiles: '**/surefire-reports/TEST-*.xml'
 #    goals: 'package'
