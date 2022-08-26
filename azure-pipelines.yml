@@ -32,7 +32,7 @@ steps:
     sonarQubeRunAnalysis: true
 #    isJacocoCoverageReportXML: true
     sqMavenPluginVersionChoice: 'latest'
-    jdkVersionOption: "1.8"
+    jdkVersionOption: "1.5"
 - task: SonarQubePublish@5
   inputs:
     pollingTimeoutSec: '300'
