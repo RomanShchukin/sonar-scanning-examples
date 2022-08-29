@@ -32,7 +32,7 @@ steps:
 #    sonarQubeRunAnalysis: true
     isJacocoCoverageReportXML: true
     sqMavenPluginVersionChoice: 'latest'
-#    codeCoverageClassFilter: '+:com.acme.module1.Module1,+:com.acme.its.ModulesTest'
+    codeCoverageClassFilter: '+:com.acme.module1.Module1,+:com.acme.its.ModulesTest'
 #    jdkVersionOption: "1.11"
 #- task: SonarQubePublish@5
 #  inputs:
