@@ -10,14 +10,14 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-#- task: SonarQubePrepare@5
-#  inputs:
-#    SonarQube: 'SonarQubeConnection'
-#    scannerMode: 'Other'
-#    organization: 'romanshchukintest'
-#    extraProperties: |
-#      sonar.projectKey=RomanShchukinTest_1
-#      sonar.projectName=RomanShchukinTest_1
+- task: SonarQubePrepare@5
+  inputs:
+    SonarQube: 'SonarQubeConnection'
+    scannerMode: 'Other'
+    organization: 'romanshchukintest'
+    extraProperties: |
+      sonar.projectKey=RomanShchukinTest_1
+      sonar.projectName=RomanShchukinTest_1
 - task: Maven@3.209.0
   inputs:
     mavenPomFile: '/home/vsts/work/1/s/sonarqube-scanner-maven/maven-multimodule/pom.xml'
@@ -29,11 +29,11 @@ steps:
     mavenVersionOption: 'Default'
     mavenAuthenticateFeed: false
     effectivePomSkip: false
-#    sonarQubeRunAnalysis: true
+    sonarQubeRunAnalysis: true
     isJacocoCoverageReportXML: true
     sqMavenPluginVersionChoice: 'latest'
 #    codeCoverageClassFilter: '+:com.acme.module1.Module1'
 #    jdkVersionOption: "1.11"
-#- task: SonarQubePublish@5
-#  inputs:
-#    pollingTimeoutSec: '300'
+- task: SonarQubePublish@5
+  inputs:
+    pollingTimeoutSec: '300'
