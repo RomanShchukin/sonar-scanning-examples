@@ -18,7 +18,7 @@ steps:
 #    extraProperties: |
 #      sonar.projectKey=RomanShchukinTest_1
 #      sonar.projectName=RomanShchukinTest_1
-- task: Maven@4.210.0
+- task: Maven@3.209.0
   inputs:
     mavenPomFile: '/home/vsts/work/1/s/sonarqube-scanner-maven/maven-multimodule/pom.xml'
     goals: 'clean verify -X'
